@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.header-menu {
+    min-width: 480px;
+    width: 50%;
+}
+
+.header-line {
+   
+    background-color: #1f1f56;
+}
+
+
+li {
+    list-style: none;
+}
+
+.main li {
+    flex-direction: row;
+    align-items: center;
+}
+
+.main a:hover {
+    color: #ec7c06;
+}
+
+ .header-menu a {
+    display: inline-block;
+    padding: 20px 0;
+    color: #b1b1d2;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: "Arial";
+}
+
+.social {
+    gap: 20px;
+    align-items: center;
+}
+
+.social a {
+    display: inline-block;
+    background: url(../img/sprite-social-hata.png) no-repeat;
+}
+
+a.fb {
+    background-position: 0 0;
+    width: 10px;
+    height: 19px;
+}
+
+a.tw {
+    background-position: 0;
+    width: 18px;
+    height: 15px;
+}
+
+a.inst {
+    background-position: 0;
+    width: 19px;
+    height: 20px;
+
+
+}
+
+.fb:hover {
+    color: #ec7c06;
+    background-position: 0 -25px;
+} 
+
+/*.social {
+    display: flex;
+  }
+
+  .social ul {
+    
+  }
+  
+  .social li {
+    padding: 10px 20px;
+    right: 15px;
+    top: 2px;
+  }
+  
+  .social a {
+    display: inline-block;
+    background: url(../img/sprite-social-hata.png) no-repeat;
+  } */
+
+
+
+
+div .connection  {
+    position: relative;
+    display: flex; 
+}
+
+.connection ul {
+    display: inline-block;
+}
+
+.connection a {
+    color: #25252c;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+
+.phone a {
+    color: #25252c;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+
+ 
+.mail a {
+    color: #25252c;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Arial";
+}
+
+.post {
+    text-decoration: underline;
+}
+
+.skype {
+    text-decoration: none;
+}
+
+
+.button a {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+    border: 2px solid #fd8300;
+    border-radius: 25px;
+}
+
+
+
+img .button:hover {
+    background-color: #ec7c06;
+}
+
+.picture {
+    padding: 60px 0 45px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), #000 url(../img/main-hata.jpg);
+    background-size: cover;
+
+    
+}
+
+.main-hata img{
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+}
+
+
+
+h1 {
+    color: #24242b;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+article {
+   padding: 0 120px;
+}
+
+article p {
+    padding: 8px 0;
+    width: 677px;
+    color: #666;
+    font-size: 14px;
+    font-family: "Arial"; 
+    line-height: 24px;
+}
+
+article a {
+    color: #000;
+}
+
+article a:hover {
+    color: #fd8300;
+}
+
+aside {
+    display: block;
+}
+
+aside p {
+    color: #fff;
+    padding: 16px;
+    width: 220px;   
+    background-color: #1f1f56;
+}
+
+aside ul {
+    width: 220px;
+    background-color: #e4e4ec;
+}
+
+aside li {
+    padding: 16px;
+    border-width: 1px;
+    border-color: #cdcddd;
+    border-style: solid;
+}
+
+aside a {
+    color: #25252c;
+    text-decoration: none;
+}
+
+aside li:hover {
+    background-color: #fd8300;
+}
+
+aside li:hover a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
