@@ -103,7 +103,6 @@ a.inst {
 
 
 
-
 .flex {
     display: flex;
     justify-content: center;
@@ -227,70 +226,74 @@ img .button:hover {
 
 
 
-
-.picture {
-    margin-bottom: 43rem;
-    padding: 60rem 0 45rem;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), #000 url(../img/main-hata.jpg);
-    background-size: cover; 
-    text-align: center;
-}
-
-.picture p {
-    margin: 10rem 0;
-}
-
-.picture p:first-child {
-    font-size: 30rem;
-    letter-spacing: 2rem;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    font-family: "Roboto Slab";
-}
-
-.picture p:nth-child(2) {
-    font-size: 14rem;
-    color: #fff;
-    font-family: "Arial";
-    text-align: center;
-}
-
-.picture p:nth-child(3) {
-    font-size: 24rem;
-    color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
-}
-
-.picture p:nth-child(4) {
-    font-size: 24rem;
-    color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
+.info {
+    width: 100%;
 }
 
 h1 {
+    padding: 5rem 0;
+    font-size: 24rem;
     color: #24242b;
-    font-size: 30rem;
     font-weight: 700;
     font-family: "Roboto Slab";
 }
 
-article p {
-    padding: 8rem 0;
-    width: 100%;
-    color: #666;
+.info p {
+    margin: 10rem 0;
     font-size: 14rem;
-    font-family: "Arial"; 
-    line-height: 24rem;
+    color: #666;
+    font-family: "Arial";       
+}
+
+.table-div {
+    overflow-x: auto;
+}
+
+table {
+    margin-bottom: 25rem;
+    width: 100%;
+    background-color: #e4e4ec;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 14rem;
+    font-family: "Roboto Slab";
+    padding: 15rem;
+    color: #fff;
+    background-color: #1f1f56;
+}
+
+tr {
+    border: 1rem #cdcddd solid;
+}
+
+td {
+    font-size: 14rem;
+    color: #666;
+    font-family: "Arial";
+    padding: 15rem;
+}
+
+tr:hover td {
+    background-color: #fd8300;
+    color: #fff;
+}
+
+article {
+    margin-bottom: 30rem;
+}
+article p {
+    padding: 5rem 0;
+    font-size: 13rem;
+    color: #666;
+    font-family: "Arial";
 }
 
 article a {
-    font-size: 14px;
-    text-decoration: underline;
-    color: #000;
-    font-weight: bold;
+    padding: 30rem 0;
+    font-size: 13rem;
+    color: #666;
     font-family: "Arial";
 }
 
@@ -299,75 +302,26 @@ article a:hover {
 }
 
 hr {
-    margin: 50rem 0;
+    margin-bottom: 30rem;
     border-top: #e4e4ec;
 }
 
-aside {
-    margin-bottom: 30rem;
-}
 
-aside p {
-    width: 100%;
-    color: #fff;
-    padding: 17rem;
-    font-size: 16rem;
-    background-color: #1f1f56;
-}
-
-aside a {
-    display: inline-block;
-    padding: 17rem;
-    width: 100%;
-    text-decoration: none;
-    font-size: 14rem;
-    color: #25252c;
-    font-family: "Arial";
-}
-
-aside li {
-    background-color: #e4e4ec;
-    border: 1rem #cdcddd solid;
-}
-
-aside li:hover ul{
-    display: block;
-}
-
-.environment li {
-    border: none;
-}
-
-.environment > a:hover {
-    color: #fff;
-    background-color: #fd8300;
-}
-
-.sub-environment {
-    display: none;
-    position: absolute;
-    width: 220rem;
-}
-
-.sub-environment a:hover{
-    background-color: #cecedd;
-    color: #666;
-}
-
-h2 {
-    font-size: 24rem;
-    color: #24242b;
-    font-weight: 700;
-    font-family: "Roboto Slab";
-}
 
 .projects {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 45rem;
 }
+
+.projects div {
+    margin: 25rem;
+}
+
 .projects p {
     font-size: 13rem;
+    line-height: 18rem;
     color: #9999a6;
     font-family: "Arial";
 }
@@ -376,14 +330,17 @@ h2 {
     height: 150rem;
 }
 
-.edmonton,
-.montreal,
-.calgary {
-    margin: 20rem;
+h2 {
+    font-size: 24rem;
+    line-height: 24rem;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
 }
 
-.name {
+.name{
     font-size: 14rem;
+    line-height: 24rem;
     color: #1f1f56;
     font-weight: bold;
     font-family: "Arial";
@@ -393,6 +350,8 @@ h2 {
 .name:hover {
     text-decoration: underline;
 }
+
+
 
 footer {
     background-color: #ededf5;
@@ -525,23 +484,10 @@ footer ul {
         display: flex;
         justify-content: space-between;
     }
-    
-    .main-info-center {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    article {
-        width: 60%;
-    }
-
-    aside {
-        min-width: 220rem;
-    }
 
     .projects {
         flex-wrap: nowrap;
-        width: 67%;
+        width: 100%;
     }
 
     .footer {
@@ -549,21 +495,3 @@ footer ul {
         justify-content: space-between;
     }
 }
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-

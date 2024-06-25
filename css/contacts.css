@@ -99,11 +99,6 @@ a.inst {
 }
 
 
-
-
-
-
-
 .flex {
     display: flex;
     justify-content: center;
@@ -227,172 +222,161 @@ img .button:hover {
 
 
 
-
-.picture {
-    margin-bottom: 43rem;
-    padding: 60rem 0 45rem;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), #000 url(../img/main-hata.jpg);
-    background-size: cover; 
-    text-align: center;
-}
-
-.picture p {
-    margin: 10rem 0;
-}
-
-.picture p:first-child {
-    font-size: 30rem;
-    letter-spacing: 2rem;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    font-family: "Roboto Slab";
-}
-
-.picture p:nth-child(2) {
-    font-size: 14rem;
-    color: #fff;
-    font-family: "Arial";
-    text-align: center;
-}
-
-.picture p:nth-child(3) {
-    font-size: 24rem;
-    color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
-}
-
-.picture p:nth-child(4) {
-    font-size: 24rem;
-    color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
-}
-
 h1 {
+    margin-top: 25rem;
+    margin-bottom: 25rem;
+    font-size: 24rem; 
     color: #24242b;
-    font-size: 30rem;
-    font-weight: 700;
     font-family: "Roboto Slab";
-}
-
-article p {
-    padding: 8rem 0;
-    width: 100%;
-    color: #666;
-    font-size: 14rem;
-    font-family: "Arial"; 
-    line-height: 24rem;
-}
-
-article a {
-    font-size: 14px;
-    text-decoration: underline;
-    color: #000;
-    font-weight: bold;
-    font-family: "Arial";
-}
-
-article a:hover {
-    color: #fd8300;
-}
-
-hr {
-    margin: 50rem 0;
-    border-top: #e4e4ec;
-}
-
-aside {
-    margin-bottom: 30rem;
-}
-
-aside p {
-    width: 100%;
-    color: #fff;
-    padding: 17rem;
-    font-size: 16rem;
-    background-color: #1f1f56;
-}
-
-aside a {
-    display: inline-block;
-    padding: 17rem;
-    width: 100%;
-    text-decoration: none;
-    font-size: 14rem;
-    color: #25252c;
-    font-family: "Arial";
-}
-
-aside li {
-    background-color: #e4e4ec;
-    border: 1rem #cdcddd solid;
-}
-
-aside li:hover ul{
-    display: block;
-}
-
-.environment li {
-    border: none;
-}
-
-.environment > a:hover {
-    color: #fff;
-    background-color: #fd8300;
-}
-
-.sub-environment {
-    display: none;
-    position: absolute;
-    width: 220rem;
-}
-
-.sub-environment a:hover{
-    background-color: #cecedd;
-    color: #666;
 }
 
 h2 {
-    font-size: 24rem;
+    margin-bottom: 22rem;
+    font-size: 14rem;
     color: #24242b;
-    font-weight: 700;
     font-family: "Roboto Slab";
 }
 
-.projects {
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts div {
+    margin: 10rem;
+}
+
+.contacts p {
+    margin: 8rem 0;
+    font-size: 14rem;
+    line-height: 21rem;
+    color: #666;
+    font-family: "Arial";
+}
+
+.phone-contacts a {
+    color: #25252c;
+    text-decoration: none;
+    font-size: 18rem;
+    line-height: 24rem;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.mail-contacts a {
+    color: #25252c;
+    font-size: 16rem;
+    line-height: 24rem;
+    font-family: "Arial";
+}
+
+.props {
+    width: 255rem;
+}
+
+hr {
+    border-top: #e4e4ec;
+    margin: 20rem 0;
+}
+
+.map {
+    width: 465rem;
+    overflow: hidden;
+}
+
+iframe {
+    min-height: 400rem;
+    margin-top: -70rem;
+    width: 100%;
+    border: none;
+}
+
+.center {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30rem;
 }
-.projects p {
+
+.form {
+    /* margin-left: 28rem; */
+    width: 100%;
+}
+
+.forms {
+    display: flex;
+}
+
+.form h2 {
+    margin: 5rem;
+    margin-bottom: 10rem;
+}
+
+.text-form input[type="text"] {
+    margin: 5rem;
+    /* min-width: 585rem; */
+    padding: 10rem;
+    width: 100%;
+}
+
+.info-form input[type="text"] {
+    margin: 5rem;
+    padding: 10rem;
+    width: 100%;
+}
+
+input[type="text"] {
+    border: 1rem #c4c4d3 solid;
+    border-radius: 3rem;
+}
+
+textarea {
+    padding: 10rem;
+    margin: 5rem;
+    /* min-width: 585rem; */
+    width: 100%;
+    border: 1rem solid #c4c4d3;
+}
+
+input[type="submit"] {
+    padding: 15rem 30rem;
+    border-radius: 30rem;
+    background-color: #fd8300;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.send {
+    margin-left: 5rem;
+    margin-top: 10rem;
+}
+
+.send-agree {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+
+.agree {
+    display: flex;
+    margin: 25rem;
+}
+
+.agree label {
+    margin-right: 10rem;
+}
+
+.agree p {
     font-size: 13rem;
-    color: #9999a6;
+    color: #666;
     font-family: "Arial";
 }
 
-.projects img {
-    height: 150rem;
-}
 
-.edmonton,
-.montreal,
-.calgary {
-    margin: 20rem;
-}
 
-.name {
-    font-size: 14rem;
-    color: #1f1f56;
-    font-weight: bold;
-    font-family: "Arial";
-    text-decoration: none;
-}
 
-.name:hover {
-    text-decoration: underline;
-}
+
 
 footer {
     background-color: #ededf5;
@@ -520,28 +504,49 @@ footer ul {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .center {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form {
+        width: 400rem;
+    }
+
+
+}
+
 @media screen and (min-width: 1440px) {
     .flex {
         display: flex;
         justify-content: space-between;
     }
     
-    .main-info-center {
+    .contacts {
         display: flex;
         justify-content: space-between;
     }
 
-    article {
-        width: 60%;
+    .map {
+        width: 50%;
     }
 
-    aside {
-        min-width: 220rem;
+    .form {
+        width: 50%;
+        margin-left: 10rem;
     }
 
-    .projects {
-        flex-wrap: nowrap;
-        width: 67%;
+    .info-form input[type="text"] {
+        display: flex;
+        justify-content: space-between;
+        width: 200rem;
     }
 
     .footer {
@@ -549,21 +554,5 @@ footer ul {
         justify-content: space-between;
     }
 }
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
 
 
