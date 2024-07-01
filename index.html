@@ -39,12 +39,12 @@
                             <a href="index.html"><img src="img/logo.png" alt="логотип"></a>
                         </div>
                         <div class="phone">
-                            <p><a href="tel:+380971002525">+38(097) 100-25-25</a></p>
+                            <p><a class="tel-number" href="tel:+380971002525">+38(097) 100-25-25</a></p>
                             <p><a href="tel:+380971002525">+38(097) 100-25-25</a></p>
                         </div>
                         <div class="mail">
-                            <p><a href="mailto:hataplus@hata.com.ua">hataplus@hata.com.ua</a></p>
-                            <p><a href="skype:hataplus" class="skype">hataplus</a></p>
+                            <p><a class="mail-hata" href="mailto:hataplus@hata.com.ua">hataplus@hata.com.ua</a></p>
+                            <p><a class="skype" href="skype:hataplus">hataplus</a></p>
                         </div>
                         <div class="button">
                             <a href="tel:+380971002525">Замовити дзвінок</a>
@@ -57,8 +57,7 @@
         <div class="picture">
             <p>Пропозиція місяця</p>
             <p>Ми пропонуємо великий вибір котеджів “під ключ” за самими низькими цінами!</p>
-            <p>5999</p>
-            <p>грн / м2</p>
+            <p><span class="price-number">5999</span> <span class="price-m">грн / м2</span></p>
         </div>
         <div class="position wrapper">
            <div class="main-info-center">
@@ -74,14 +73,42 @@
                     якому можна не тільки посадити сад, але облаштувати зону відпочинку, спорудити сауну, поставити
                     альтанку
                     і барбекю.</p>
-                  <p><a href="#">Детальніше про нас</a></p>
-                  <hr>
+                  <p class="more"><a href="#">Детальніше про нас</a></p>
+                  
               </article>
-              <div>
+              <section>
+                <hr>
+                <h2>Популярні проекти</h2>
+                <div class="projects">
+                      <div class="edmonton">
+                          <img src="img/edmonton.png" alt="edmonton-house">
+                          <p class="name"><a href="#">EDMONTON (338 м2)</a></p>
+                          <p class="about">Загальна площа будови: 312 м2</p>
+                          <p class="about">Кількість спалень: 4</p>
+                          <p class="about">Гараж: 2 авто</p>
+                      </div>
+                      <div class="montreal">
+                          <img src="img/montreal.png" alt="montreal-house">
+                          <p class="name"><a href="#">MONTREAL (332 м2)</a></p>
+                          <p class="about">Загальна площа будови: 290 м2</p>
+                          <p class="about">Кількість спалень: 3</p>
+                          <p class="about">Гараж: 2 авто</p>
+                      </div>
+                      <div class="calgary">
+                          <img src="img/calgary.png" alt="calgary-house">
+                          <p class="name"><a href="#">CALGARY (294 м2)</a></p>
+                          <p class="about">Загальна площа будови: 272 м2</p>
+                          <p class="about">Кількість спалень: 3</p>
+                          <p class="about">Гараж: 2 авто</p>
+                      </div>
+                </div>
+              </section>
+            </div>
+            <div>
                 <aside>
                     <p>Категорії проектів</p>
                     <ul>
-                        <li><a href="#">Генеральний план</a></li>
+                        <li class="environment"><a href="#">Генеральний план</a></li>
                         <li class="environment"><a href="#">Навколишнє середовище</a>
                             <ul class="sub-environment">
                                 <li><a href="#">Продані</a></li>
@@ -89,47 +116,22 @@
                                 <li><a href="#">В процесі будівництва</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Умови придбання</a></li>
-                        <li><a href="#">Загородні котеджі</a></li>
-                        <li><a href="#">Інфраструктура</a></li>
-                        <li><a href="#">Готові будинки</a></li>
+                        <li class="environment"><a href="#">Умови придбання</a></li>
+                        <li class="environment"><a href="#">Загородні котеджі</a></li>
+                        <li class="environment"><a href="#">Інфраструктура</a></li>
+                        <li class="environment"><a href="#">Готові будинки</a></li>
                     </ul>
                 </aside>
+            
             </div>
+              
         </div>
-              <section>
-                  <h2>Популярні проекти</h2>
-                    <div class="projects">
-                        <div class="edmonton">
-                            <img src="img/edmonton.png" alt="edmonton-house">
-                            <p><a href="#" class="name">EDMONTON (338 м2)</a></p>
-                            <p>Загальна площа будови: 312 м2</p>
-                            <p>Кількість спалень: 4</p>
-                            <p>Гараж: 2 авто</p>
-                        </div>
-                        <div class="montreal">
-                            <img src="img/montreal.png" alt="montreal-house">
-                            <p><a href="#" class="name">MONTREAL (332 м2)</a></p>
-                            <p>Загальна площа будови: 290 м2</p>
-                            <p>Кількість спалень: 3</p>
-                            <p>Гараж: 2 авто</p>
-                        </div>
-                        <div class="calgary">
-                            <img src="img/calgary.png" alt="calgary-house">
-                            <p><a href="#" class="name">CALGARY (294 м2)</a></p>
-                            <p>Загальна площа будови: 272 м2</p>
-                            <p>Кількість спалень: 3</p>
-                            <p>Гараж: 2 авто</p>
-                        </div>
-                    </div>
-                </section>
-          </div>
           
        
     </main>
     <footer>
         <div class="wrapper">
-            <div class="footer">
+            <div class="flex">
                     <div>
                         <ul class="info-build">
                             <li><a href="#">Будинки</a></li>
@@ -146,15 +148,15 @@
                         </ul>
                     </div>
                     <div>
-                        <ul class="phone-footer">
-                            <li><p><a href="#">+38(097) 100-25-25</a></p></li>
+                        <ul class="phone">
+                            <li><p><a class="tel-number" href="#">+38(097) 100-25-25</a></p></li>
                             <li><p><a href="#">+38(097) 100-25-25</a></p></li>
                         </ul>
                     </div>
                     <div>
-                        <ul class="mail-footer">
-                            <li><p><a href="#">hataplus@hata.com.ua</a></p></li>
-                            <li><p><a href="#" class="skype-footer">hataplus</a></p></li>
+                        <ul class="mail">
+                            <li><p><a class="mail-hata" href="#">hataplus@hata.com.ua</a></p></li>
+                            <li><p><a href="#" class="skype">hataplus</a></p></li>
                         </ul>
                     </div>
             </div>

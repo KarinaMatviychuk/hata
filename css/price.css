@@ -22,7 +22,12 @@ html {
 
 .wrapper {
     width: 80%;
+    max-width: 960rem;
     margin: 0 auto;
+}
+
+nav {
+    padding: 20rem 20rem 20rem 0;
 }
 
 li {
@@ -38,10 +43,6 @@ li {
     justify-content: space-between;
 }
 
-.flex-nav li {
-    padding: 20rem 5rem 15rem 0;
-}
-
 
  
 
@@ -51,7 +52,6 @@ li {
     width: 30px;
     height: 24px;
     cursor: pointer;
-    top: 20rem;
 }
 
 .burger span,
@@ -62,7 +62,6 @@ li {
     height: 4rem;
     background-color: #fff;
     border-radius: 2rem;
-    /* transition: all 0.3s ease; */
 }
 
 .burger span {
@@ -188,104 +187,88 @@ a.inst {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 30rem 0;
+    gap: 30rem;
 }
 
-.logo {
-    margin-top: 20rem;
-}
+.phone p:first-child,
+.mail p:first-child {
+    margin-bottom: 5rem;
+} 
 
 .phone,
 .mail {
+    width: 100%;
     position: relative;
-    margin: 20rem;
-    margin-left: 60rem;
+    
 }
 
-.phone p {
-    position: relative;
-    width: 180rem;
+.flex p {
+    display: flex;
+    justify-content: center;
 }
-.phone a {
-    width: 180rem;
+
+
+.phone a,
+.mail a,
+.skype a {
+    position: relative;
+}
+
+.phone a,
+.mail a {
+    padding-left: 30rem;
     display: inline;
     color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
     font-family: "Arial";
 }
 
-.phone::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 0;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
+.phone a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18rem;
 }
 
 .mail a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
     font-size: 16rem;
-    line-height: 24rem;
-    font-family: "Arial";
 }
 
-.mail p {
-    width: 180rem;
-}
-
-.mail::before {
+.phone .tel-number::before,
+.mail .mail-hata::before,
+.skype::before {
     content: "";
     position: absolute;
-    left: -30rem;
-    top: 6rem;
+    left: 0;
+    background-position: 0 0;
+}
+
+.phone .tel-number::before {
+    width: 17rem;
+    height: 17rem;
+    background: url(../img/phone-hata.png) no-repeat;
+}
+
+.mail .mail-hata::before {
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
 }
 
 .skype {
     text-decoration: none;
 }
 
-.skype a {
-    display: inline;
-    width: 180rem;
-}
-
-.skype p {
-    width: 180rem;
-}
-
 .skype::before {
-    content: "";
-    position: absolute;
-    left: -29rem;
-    top: 25rem;
+    top: 0;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
 }
 
-.skype,
-.skype-footer {
-    text-decoration: none;
-}
-
-.button {
-    margin: 20rem;
-}
 
 .button a {
     display: inline-block;
-    padding: 12rem 30rem;
+    padding: 16rem 30rem;
     font-size: 16rem;
     color: #25252c;
     font-weight: bold;
@@ -297,13 +280,8 @@ a.inst {
 
 .button:hover {
     background-color: #fd8300;
-    border-radius: 30rem;
+    border-radius: 25rem;
 }
-
-img .button:hover {
-    background-color: #ec7c06;
-}
-
 
 
 
@@ -324,6 +302,23 @@ h1 {
     font-size: 14rem;
     color: #666;
     font-family: "Arial";       
+}
+
+
+
+table tr {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.foot-table {
+    border-bottom: none;
+}
+
+table {
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .table-div {
@@ -361,21 +356,20 @@ tr:hover td {
     color: #fff;
 }
 
-article {
-    margin-bottom: 30rem;
-}
-article p {
-    padding: 5rem 0;
+article p,
+article a {
     font-size: 13rem;
     color: #666;
     font-family: "Arial";
 }
 
+article p {
+    padding: 5rem 0;
+}
+
 article a {
+    display: inline-block;
     padding: 30rem 0;
-    font-size: 13rem;
-    color: #666;
-    font-family: "Arial";
 }
 
 article a:hover {
@@ -383,24 +377,27 @@ article a:hover {
 }
 
 hr {
-    margin-bottom: 30rem;
     border-top: #e4e4ec;
+}
+
+
+.projects,
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 
 
 .projects {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 45rem;
-}
-
-.projects div {
-    margin: 25rem;
+    gap: 16rem;
+    margin-bottom: 30rem;
 }
 
 .projects p {
+    padding: 2rem 0;
     font-size: 13rem;
     line-height: 18rem;
     color: #9999a6;
@@ -412,6 +409,7 @@ hr {
 }
 
 h2 {
+    padding: 30rem 0;
     font-size: 24rem;
     line-height: 24rem;
     color: #24242b;
@@ -419,9 +417,10 @@ h2 {
     font-family: "Roboto Slab";
 }
 
-.name{
+.name {
+    display: inline-block;
+    padding: 15rem 0;
     font-size: 14rem;
-    line-height: 24rem;
     color: #1f1f56;
     font-weight: bold;
     font-family: "Arial";
@@ -442,12 +441,6 @@ footer ul {
     padding: 20rem 0;
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .info-build a {
     font-size: 14rem;
     line-height: 26rem;
@@ -460,66 +453,6 @@ footer ul {
     color: #ec7c06;
 }
 
-.phone-footer a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
-    font-family: "Arial";
-    text-decoration: none;
-}
-
-.phone-footer p {
-    width: 180rem;
-}
-
-.phone-footer,
-.mail-footer {
-    position: relative;
-    margin-left: 40rem;
-}
-
-.phone-footer::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 23rem;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
-}
-
-.mail-footer a {
-    display: inline;
-    color: #25252c;
-    font-size: 16rem;
-    font-family: "Arial";
-}
-
-.mail-footer::before {
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 25rem;
-    width: 18rem;
-    height: 13rem;
-    background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
-}
-
-.skype-footer::before {
-    content: "";
-    position: absolute;
-    left: -27rem;
-    top: 47rem;
-    width: 19rem;
-    height: 19rem;
-    background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
-}
 
 .construction-company {
     background-color: #dcdce6;
@@ -532,16 +465,13 @@ footer ul {
     font-size: 13rem;
 }
 
-
-@media screen and (min-width: 500px) {
-    .social {
-        display: flex;
-        column-gap: 30rem;
+@media screen and (min-width: 600px) {
+    .flex div {
+        width: 45%;
     }
-
-    .footer-flex {
-        display: flex;
-        justify-content: center;
+ 
+    .flex {
+        justify-content: space-between;
     }
 }
 
@@ -549,6 +479,14 @@ footer ul {
     .header-menu  {
         display: flex;
         column-gap: 10rem;
+    }
+
+    .flex div {
+        width: max-content;
+    }
+
+    .button {
+        justify-self: center;
     }
 
     .burger {
@@ -576,7 +514,8 @@ footer ul {
 }
 
 @media screen and (min-width: 1440px) {
-    .flex {
+    .flex,
+    .footer {
         display: flex;
         justify-content: space-between;
     }
@@ -584,10 +523,5 @@ footer ul {
     .projects {
         flex-wrap: nowrap;
         width: 100%;
-    }
-
-    .footer {
-        display: flex;
-        justify-content: space-between;
     }
 }

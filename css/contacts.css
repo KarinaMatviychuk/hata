@@ -22,7 +22,12 @@ html {
 
 .wrapper {
     width: 80%;
+    max-width: 960rem;
     margin: 0 auto;
+}
+
+nav {
+    padding: 20rem 20rem 20rem 0;
 }
 
 li {
@@ -38,10 +43,6 @@ li {
     justify-content: space-between;
 }
 
-.flex-nav li {
-    padding: 20rem 5rem 15rem 0;
-}
-
 
  
 
@@ -51,7 +52,6 @@ li {
     width: 30px;
     height: 24px;
     cursor: pointer;
-    top: 20rem;
 }
 
 .burger span,
@@ -62,7 +62,6 @@ li {
     height: 4rem;
     background-color: #fff;
     border-radius: 2rem;
-    /* transition: all 0.3s ease; */
 }
 
 .burger span {
@@ -184,104 +183,88 @@ a.inst {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 30rem 0;
+    gap: 30rem;
 }
 
-.logo {
-    margin-top: 20rem;
-}
+.phone p:first-child,
+.mail p:first-child {
+    margin-bottom: 5rem;
+} 
 
 .phone,
 .mail {
+    width: 100%;
     position: relative;
-    margin: 20rem;
-    margin-left: 60rem;
+    
 }
 
-.phone p {
-    position: relative;
-    width: 180rem;
+.flex p {
+    display: flex;
+    justify-content: center;
 }
-.phone a {
-    width: 180rem;
+
+
+.phone a,
+.mail a,
+.skype a {
+    position: relative;
+}
+
+.phone a,
+.mail a {
+    padding-left: 30rem;
     display: inline;
     color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
     font-family: "Arial";
 }
 
-.phone::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 0;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
+.phone a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18rem;
 }
 
 .mail a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
     font-size: 16rem;
-    line-height: 24rem;
-    font-family: "Arial";
 }
 
-.mail p {
-    width: 180rem;
-}
-
-.mail::before {
+.phone .tel-number::before,
+.mail .mail-hata::before,
+.skype::before {
     content: "";
     position: absolute;
-    left: -30rem;
-    top: 6rem;
+    left: 0;
+    background-position: 0 0;
+}
+
+.phone .tel-number::before {
+    width: 17rem;
+    height: 17rem;
+    background: url(../img/phone-hata.png) no-repeat;
+}
+
+.mail .mail-hata::before {
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
 }
 
 .skype {
     text-decoration: none;
 }
 
-.skype a {
-    display: inline;
-    width: 180rem;
-}
-
-.skype p {
-    width: 180rem;
-}
-
 .skype::before {
-    content: "";
-    position: absolute;
-    left: -29rem;
-    top: 25rem;
+    top: 0;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
 }
 
-.skype,
-.skype-footer {
-    text-decoration: none;
-}
-
-.button {
-    margin: 20rem;
-}
 
 .button a {
     display: inline-block;
-    padding: 12rem 30rem;
+    padding: 16rem 30rem;
     font-size: 16rem;
     color: #25252c;
     font-weight: bold;
@@ -293,12 +276,9 @@ a.inst {
 
 .button:hover {
     background-color: #fd8300;
-    border-radius: 30rem;
+    border-radius: 25rem;
 }
 
-img .button:hover {
-    background-color: #ec7c06;
-}
 
 
 
@@ -339,7 +319,6 @@ h2 {
     color: #25252c;
     text-decoration: none;
     font-size: 18rem;
-    line-height: 24rem;
     font-weight: bold;
     font-family: "Arial";
 }
@@ -347,7 +326,6 @@ h2 {
 .mail-contacts a {
     color: #25252c;
     font-size: 16rem;
-    line-height: 24rem;
     font-family: "Arial";
 }
 
@@ -380,7 +358,6 @@ iframe {
 }
 
 .form {
-    /* margin-left: 28rem; */
     width: 100%;
 }
 
@@ -393,32 +370,19 @@ iframe {
     margin-bottom: 10rem;
 }
 
-.text-form input[type="text"] {
-    margin: 5rem;
-    /* min-width: 585rem; */
-    padding: 10rem;
-    width: 100%;
-}
-
-
-
-.info-form input[type="text"] {
+.text-form input[type="text"],
+.info-form input[type="text"],
+textarea {
     margin: 5rem;
     padding: 10rem;
     width: 100%;
 }
 
-input[type="text"] {
+
+input[type="text"],
+textarea {
     border: 1rem #c4c4d3 solid;
     border-radius: 3rem;
-}
-
-textarea {
-    padding: 10rem;
-    margin: 5rem;
-    /* min-width: 585rem; */
-    width: 100%;
-    border: 1rem solid #c4c4d3;
 }
 
 input[type="submit"] {
@@ -437,7 +401,6 @@ input[type="submit"] {
 
 .send-agree {
     display: flex;
-    /* justify-content: center; */
     flex-wrap: wrap;
 }
 
@@ -487,66 +450,9 @@ footer ul {
     color: #ec7c06;
 }
 
-.phone-footer a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
-    font-family: "Arial";
-    text-decoration: none;
-}
 
-.phone-footer p {
-    width: 180rem;
-}
 
-.phone-footer,
-.mail-footer {
-    position: relative;
-    margin-left: 40rem;
-}
 
-.phone-footer::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 23rem;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
-}
-
-.mail-footer a {
-    display: inline;
-    color: #25252c;
-    font-size: 16rem;
-    font-family: "Arial";
-}
-
-.mail-footer::before {
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 25rem;
-    width: 18rem;
-    height: 13rem;
-    background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
-}
-
-.skype-footer::before {
-    content: "";
-    position: absolute;
-    left: -27rem;
-    top: 47rem;
-    width: 19rem;
-    height: 19rem;
-    background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
-}
 
 .construction-company {
     background-color: #dcdce6;
@@ -559,23 +465,30 @@ footer ul {
     font-size: 13rem;
 }
 
-
-@media screen and (min-width: 500px) {
-    .social {
-        display: flex;
-        column-gap: 30rem;
+@media screen and (min-width: 600px) {
+    .flex div {
+        width: 45%;
     }
-
-    .footer-flex {
-        display: flex;
-        justify-content: center;
+ 
+    .flex {
+        justify-content: space-between;
     }
 }
+ 
+
 
 @media screen and (min-width: 768px) {
     .header-menu  {
         display: flex;
         column-gap: 10rem;
+    }
+
+    .flex div {
+        width: max-content;
+    }
+
+    .button {
+        justify-self: center;
     }
 
     .burger {
@@ -625,17 +538,13 @@ footer ul {
     .info-form label {
         width: 50%;
     }
-
-
 }
 
 @media screen and (min-width: 1440px) {
-    .flex {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .contacts {
+    .flex,
+    .contacts,
+    .info-form input[type="text"],
+    .footer {
         display: flex;
         justify-content: space-between;
     }
@@ -649,11 +558,6 @@ footer ul {
         margin-left: 10rem;
     }
 
-    .info-form input[type="text"] {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .info-form {
         display: flex;
         column-gap: 10rem;
@@ -661,12 +565,6 @@ footer ul {
     
     .info-form label {
         width: 50%;
-    }
-
-
-    .footer {
-        display: flex;
-        justify-content: space-between;
     }
 }
 

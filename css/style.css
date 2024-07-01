@@ -22,7 +22,12 @@ html {
 
 .wrapper {
     width: 80%;
+    max-width: 960rem;
     margin: 0 auto;
+}
+
+nav {
+    padding: 20rem 20rem 20rem 0;
 }
 
 li {
@@ -38,12 +43,7 @@ li {
     justify-content: space-between;
 }
 
-.flex-nav li {
-    padding: 20rem 5rem 15rem 0;
-}
 
-
- 
 
 
 .burger {
@@ -51,7 +51,6 @@ li {
     width: 30px;
     height: 24px;
     cursor: pointer;
-    top: 20rem;
 }
 
 .burger span,
@@ -62,7 +61,6 @@ li {
     height: 4rem;
     background-color: #fff;
     border-radius: 2rem;
-    /* transition: all 0.3s ease; */
 }
 
 .burger span {
@@ -77,14 +75,6 @@ li {
 .burger::after {
     content: "";
     bottom: 0;
-}
-
-nav {
-    height: 60rem;
-}
-
-.hide {
-    display: none;
 }
 
 .header-menu {
@@ -102,7 +92,6 @@ nav {
 .burger {
     transition: 1s;
 }
-
 
 .hide {
     display: block;
@@ -143,6 +132,10 @@ nav {
     justify-content: center;
 }
 
+.social li {
+    display: flex;
+    align-items: center;
+}
 
 .social a {
     display: inline-block;
@@ -180,113 +173,92 @@ a.inst {
 }
 
 
-
-
-
-
-
 .flex {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 30rem 0;
+    gap: 30rem;
 }
 
-.logo {
-    margin-top: 20rem;
-}
+.phone p:first-child,
+.mail p:first-child {
+    margin-bottom: 5rem;
+} 
 
 .phone,
 .mail {
+    width: 100%;
     position: relative;
-    margin: 20rem;
-    margin-left: 60rem;
+    
 }
 
-.phone p {
-    position: relative;
-    width: 180rem;
+.flex p {
+    display: flex;
+    justify-content: center;
 }
-.phone a {
-    width: 180rem;
+
+
+.phone a,
+.mail a,
+.skype a {
+    position: relative;
+}
+
+.phone a,
+.mail a {
+    padding-left: 30rem;
     display: inline;
     color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
     font-family: "Arial";
 }
 
-.phone::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 0;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
+.phone a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18rem;
 }
 
 .mail a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
     font-size: 16rem;
-    line-height: 24rem;
-    font-family: "Arial";
 }
 
-.mail p {
-    width: 180rem;
-}
-
-.mail::before {
+.phone .tel-number::before,
+.mail .mail-hata::before,
+.skype::before {
     content: "";
     position: absolute;
-    left: -30rem;
-    top: 6rem;
+    left: 0;
+    background-position: 0 0;
+}
+
+.phone .tel-number::before {
+    width: 17rem;
+    height: 17rem;
+    background: url(../img/phone-hata.png) no-repeat;
+}
+
+.mail .mail-hata::before {
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
 }
 
 .skype {
     text-decoration: none;
 }
 
-.skype a {
-    display: inline;
-    width: 180rem;
-}
-
-.skype p {
-    width: 180rem;
-}
-
 .skype::before {
-    content: "";
-    position: absolute;
-    left: -29rem;
-    top: 25rem;
+    top: 0;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
 }
 
-.skype,
-.skype-footer {
-    text-decoration: none;
-}
-
-.button {
-    margin: 20rem;
-}
 
 .button a {
     display: inline-block;
-    padding: 12rem 30rem;
+    padding: 16rem 30rem;
     font-size: 16rem;
     color: #25252c;
     font-weight: bold;
@@ -298,11 +270,7 @@ a.inst {
 
 .button:hover {
     background-color: #fd8300;
-    border-radius: 30rem;
-}
-
-img .button:hover {
-    background-color: #ec7c06;
+    border-radius: 25rem;
 }
 
 
@@ -310,7 +278,7 @@ img .button:hover {
 
 
 .picture {
-    margin-bottom: 43rem;
+    margin-bottom: 40rem;
     padding: 60rem 0 45rem;
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), #000 url(../img/main-hata.jpg);
     background-size: cover; 
@@ -319,36 +287,37 @@ img .button:hover {
 
 .picture p {
     margin: 10rem 0;
+    color: #fff;
+
 }
 
 .picture p:first-child {
     font-size: 30rem;
     letter-spacing: 2rem;
     text-transform: uppercase;
-    color: #fff;
     font-weight: 700;
     font-family: "Roboto Slab";
 }
 
 .picture p:nth-child(2) {
     font-size: 14rem;
-    color: #fff;
     font-family: "Arial";
     text-align: center;
 }
 
 .picture p:nth-child(3) {
-    font-size: 24rem;
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
 }
 
-.picture p:nth-child(4) {
-    font-size: 24rem;
-    color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
+.price-number {
+    font-size: 40px;
+    margin-right: 10rem;
+}
+
+.price-m {
+    font-size: 24px;
 }
 
 h1 {
@@ -379,13 +348,17 @@ article a:hover {
     color: #fd8300;
 }
 
+.more {
+    padding: 30rem 0;
+}
+
 hr {
-    margin: 50rem 0;
+    width: 100%;
     border-top: #e4e4ec;
 }
 
 aside {
-    margin-bottom: 30rem;
+    margin: 30rem 0;
 }
 
 aside p {
@@ -394,6 +367,8 @@ aside p {
     padding: 17rem;
     font-size: 16rem;
     background-color: #1f1f56;
+    font-weight: 700;
+    font-family: "Roboto Slab";
 }
 
 aside a {
@@ -409,33 +384,47 @@ aside a {
 aside li {
     background-color: #e4e4ec;
     border: 1rem #cdcddd solid;
+    border-left: none;
+    border-right: none;
 }
 
 aside li:hover ul{
     display: block;
 }
 
+aside :last-child {
+    border-bottom: none;
+}
+
+aside {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
 .environment li {
     border: none;
 }
 
-.environment > a:hover {
+
+.environment >a:hover {
     color: #fff;
     background-color: #fd8300;
 }
 
-.sub-environment {
-    display: none;
-    position: absolute;
-    width: 220rem;
-}
-
-.sub-environment a:hover{
+ .sub-environment a:hover {
     background-color: #cecedd;
     color: #666;
 }
 
+
+
+.sub-environment {
+    display: none;
+}
+
+
 h2 {
+    padding: 30rem 0;
     font-size: 24rem;
     color: #24242b;
     font-weight: 700;
@@ -446,7 +435,9 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 25rem;
 }
+
 .projects p {
     font-size: 13rem;
     color: #9999a6;
@@ -454,16 +445,14 @@ h2 {
 }
 
 .projects img {
-    height: 150rem;
-}
-
-.edmonton,
-.montreal,
-.calgary {
-    margin: 20rem;
+    width: 100%;
 }
 
 .name {
+    margin: 15rem 0;
+}
+
+.name a {
     font-size: 14rem;
     color: #1f1f56;
     font-weight: bold;
@@ -475,6 +464,13 @@ h2 {
     text-decoration: underline;
 }
 
+.about {
+    padding: 0 0 5rem 0;
+}
+
+
+
+
 footer {
     background-color: #ededf5;
 }
@@ -483,11 +479,18 @@ footer ul {
     padding: 20rem 0;
 }
 
+
 .footer {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    column-gap: 26rem;
+
 }
+
+.footer div {
+    width: 45%;
+}
+
 
 .info-build a {
     font-size: 14rem;
@@ -501,66 +504,6 @@ footer ul {
     color: #ec7c06;
 }
 
-.phone-footer a {
-    display: inline;
-    width: 180rem;
-    color: #25252c;
-    text-decoration: none;
-    font-size: 18rem;
-    font-weight: bold;
-    font-family: "Arial";
-    text-decoration: none;
-}
-
-.phone-footer p {
-    width: 180rem;
-}
-
-.phone-footer,
-.mail-footer {
-    position: relative;
-    margin-left: 40rem;
-}
-
-.phone-footer::before{
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 23rem;
-    width: 17rem;
-    height: 17rem;
-    background: url(../img/phone-hata.png) no-repeat;
-    background-position: 0 0;
-}
-
-.mail-footer a {
-    display: inline;
-    color: #25252c;
-    font-size: 16rem;
-    font-family: "Arial";
-}
-
-.mail-footer::before {
-    content: "";
-    position: absolute;
-    left: -30rem;
-    top: 25rem;
-    width: 18rem;
-    height: 13rem;
-    background: url(../img/mail.png) no-repeat;
-    background-position: 0 0;
-}
-
-.skype-footer::before {
-    content: "";
-    position: absolute;
-    left: -27rem;
-    top: 47rem;
-    width: 19rem;
-    height: 19rem;
-    background: url(../img/skype.png) no-repeat;
-    background-position: 0 0;
-}
 
 .construction-company {
     background-color: #dcdce6;
@@ -571,18 +514,18 @@ footer ul {
     text-align: center;
     padding: 15rem;
     font-size: 13rem;
+    font-family: "Arial";
 }
 
+ 
 
-@media screen and (min-width: 500px) {
-    /* .social {
-        display: flex;
-        column-gap: 30rem;
-    } */
+@media screen and (min-width: 600px) {
+    .flex div {
+        width: 45%;
+    }
 
-    .footer-flex {
-        display: flex;
-        justify-content: center;
+    .flex {
+        justify-content: space-between;
     }
 }
 
@@ -590,6 +533,22 @@ footer ul {
     .header-menu  {
         display: flex;
         column-gap: 10rem;
+    }
+
+    .flex div {
+        width: max-content;
+    }
+
+    .button {
+        justify-self: center;
+    }
+
+    .projects div {
+        width: 30%;
+    }
+
+    .projects {
+        justify-content: space-between;
     }
 
     .burger {
@@ -607,23 +566,15 @@ footer ul {
         column-gap: 20rem;
     }
 
-
     .info {
         column-gap: 50rem;
-    }
-
-    .footer {
-        display: flex;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .flex {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .main-info-center {
+    .flex, 
+    .position,
+    .footer {
         display: flex;
         justify-content: space-between;
     }
@@ -637,13 +588,12 @@ footer ul {
     }
 
     .projects {
+        margin-bottom: 30rem;
         flex-wrap: nowrap;
-        width: 67%;
     }
 
     .footer {
-        display: flex;
-        justify-content: space-between;
+        flex-wrap: nowrap;
     }
 }
 
