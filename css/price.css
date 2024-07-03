@@ -323,10 +323,11 @@ table {
 
 .table-div {
     overflow-x: auto;
+    margin-bottom: 25rem;
+
 }
 
 table {
-    margin-bottom: 25rem;
     width: 100%;
     background-color: #e4e4ec;
     border-collapse: collapse;
