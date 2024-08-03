@@ -44,7 +44,6 @@ li {
 }
 
 
- 
 
 
 .burger {
@@ -136,51 +135,46 @@ nav {
     color: #fd8300;
 }
 
+.hidden {
+    display: none;
+}
+
 .social {
     display: flex;
     justify-content: center;
+    column-gap: 30px;
+    height: 25px;
 }
 
-
-.social a {
-    display: inline-block;
-    background: url(../img/sprite-social-hata.png) no-repeat;
+.fb {
+    width: 23px;
 }
 
-a.fb {
-    background-position: 0 0;
-    width: 10rem;
-    height: 19rem;
+.tw {
+    width: 17px;
 }
 
-.fb:hover {
-    background-position: 0 -22rem;
-} 
-
-a.tw {
-    background-position: -36rem -2rem;
-    width: 20rem;
-    height: 15rem;
+.inst {
+    width: 17px;
 }
 
-.tw:hover {
-    background-position: -36rem -24rem;
+.fb,
+.tw,
+.inst {
+    fill: #fff;
 }
 
-a.inst {
-    background-position: -82rem 0;
-    width: 19rem;
-    height: 20rem;
-}
-
+.fb:hover,
+.tw:hover,
 .inst:hover {
-    background-position: -82rem -22rem;
+    fill: #fd8300;
 }
 
 
-
-
-
+.header-info {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
 
 
 .flex {
@@ -189,6 +183,13 @@ a.inst {
     flex-wrap: wrap;
     padding: 30rem 0;
     gap: 30rem;
+}
+
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .phone p:first-child,
@@ -204,8 +205,7 @@ a.inst {
 }
 
 .flex p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 
@@ -249,6 +249,7 @@ a.inst {
 }
 
 .mail .mail-hata::before {
+    top: 4px;
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
@@ -259,7 +260,7 @@ a.inst {
 }
 
 .skype::before {
-    top: 0;
+    top: -1px;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
@@ -278,7 +279,7 @@ a.inst {
     text-decoration: none;
 }
 
-.button:hover {
+.button a:hover {
     background-color: #fd8300;
     border-radius: 25rem;
 }
@@ -290,7 +291,6 @@ a.inst {
 }
 
 h1 {
-    padding: 5rem 0;
     font-size: 24rem;
     color: #24242b;
     font-weight: 700;
@@ -302,6 +302,14 @@ h1 {
     font-size: 14rem;
     color: #666;
     font-family: "Arial";       
+}
+
+.info p:nth-child(2) {
+    padding: 10px 0 0 0;
+}
+
+.info p:last-child {
+    padding: 0 0 20px 0;
 }
 
 
@@ -316,6 +324,14 @@ table tr {
     border-bottom: none;
 }
 
+.head-table{
+    border: none;
+}
+
+.head-table th {
+    bottom: none;
+}
+
 table {
     border-radius: 5px;
     overflow: hidden;
@@ -324,7 +340,6 @@ table {
 .table-div {
     overflow-x: auto;
     margin-bottom: 25rem;
-
 }
 
 table {
@@ -357,6 +372,17 @@ tr:hover td {
     color: #fff;
 }
 
+
+.head-table th {
+    text-align: left;
+}
+
+.head-table th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+
 article p,
 article a {
     font-size: 13rem;
@@ -371,10 +397,13 @@ article p {
 article a {
     display: inline-block;
     padding: 30rem 0;
+    color: #fd8300;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 article a:hover {
-    color: #fd8300;
+    transform: scale(1.1,1.1);
 }
 
 hr {
@@ -390,6 +419,15 @@ hr {
 
 }
 
+h2 {
+    padding: 30rem 0;
+    font-size: 24rem;
+    line-height: 24rem;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
 
 
 .projects {
@@ -400,27 +438,23 @@ hr {
 .projects p {
     padding: 2rem 0;
     font-size: 13rem;
-    line-height: 18rem;
     color: #9999a6;
     font-family: "Arial";
 }
 
 .projects img {
-    height: 150rem;
-}
-
-h2 {
-    padding: 30rem 0;
-    font-size: 24rem;
-    line-height: 24rem;
-    color: #24242b;
-    font-weight: 700;
-    font-family: "Roboto Slab";
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .name {
-    display: inline-block;
-    padding: 15rem 0;
+    margin: 15rem 0;
+}
+
+
+.name a {
     font-size: 14rem;
     color: #1f1f56;
     font-weight: bold;
@@ -428,7 +462,14 @@ h2 {
     text-decoration: none;
 }
 
-.name:hover {
+/* figure a {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+} */
+
+.projects figure:hover .name a {
     text-decoration: underline;
 }
 
@@ -464,6 +505,7 @@ footer ul {
     text-align: center;
     padding: 15rem;
     font-size: 13rem;
+    font-family: "Arial";
 }
 
 @media screen and (min-width: 600px) {
@@ -473,6 +515,14 @@ footer ul {
  
     .flex {
         justify-content: space-between;
+    }
+
+    .mail p {
+        text-align: left;
+    }
+
+    .button a {
+        width: 209px;
     }
 }
 

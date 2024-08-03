@@ -99,7 +99,7 @@ li {
     top: 60rem;
     left: 0;
     align-items: center;
-    height: 70vh;
+    height: 65vh;
     width: 60vw;
     background-color: #1f1f56;
     z-index: 1;
@@ -127,50 +127,41 @@ li {
     color: #fd8300;
 }
 
+.hidden {
+    display: none;
+}
+
 .social {
     display: flex;
     justify-content: center;
+    column-gap: 30px;
+    height: 25px;
 }
 
-.social li {
-    display: flex;
-    align-items: center;
+.fb {
+    width: 23px;
 }
 
-.social a {
-    display: inline-block;
-    background: url(../img/sprite-social-hata.png) no-repeat;
+.tw {
+    width: 17px;
 }
 
-a.fb {
-    background-position: 0 0;
-    width: 10rem;
-    height: 19rem;
+.inst {
+    width: 17px;
 }
 
-.fb:hover {
-    background-position: 0 -22rem;
-} 
-
-a.tw {
-    background-position: -36rem -2rem;
-    width: 20rem;
-    height: 15rem;
+.fb,
+.tw,
+.inst {
+    fill: #fff;
 }
 
-.tw:hover {
-    background-position: -36rem -24rem;
-}
-
-a.inst {
-    background-position: -82rem 0;
-    width: 19rem;
-    height: 20rem;
-}
-
+.fb:hover,
+.tw:hover,
 .inst:hover {
-    background-position: -82rem -22rem;
+    fill: #fd8300;
 }
+
 
 
 .flex {
@@ -179,6 +170,12 @@ a.inst {
     flex-wrap: wrap;
     padding: 30rem 0;
     gap: 30rem;
+}
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .phone p:first-child,
@@ -194,8 +191,7 @@ a.inst {
 }
 
 .flex p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 
@@ -239,6 +235,7 @@ a.inst {
 }
 
 .mail .mail-hata::before {
+    top: 4px;
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
@@ -249,7 +246,7 @@ a.inst {
 }
 
 .skype::before {
-    top: 0;
+    top: -1px;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
@@ -268,10 +265,11 @@ a.inst {
     text-decoration: none;
 }
 
-.button:hover {
+.button a:hover {
     background-color: #fd8300;
     border-radius: 25rem;
 }
+
 
 
 
@@ -337,15 +335,17 @@ article p {
 }
 
 article a {
+    display: inline-block;
     font-size: 14px;
     text-decoration: underline;
-    color: #000;
+    color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
+    transition: 0.3s;
 }
 
 article a:hover {
-    color: #fd8300;
+    transform: scale(1.1,1.1);
 }
 
 .more {
@@ -356,6 +356,32 @@ hr {
     width: 100%;
     border-top: #e4e4ec;
 }
+
+.environment {
+    position: relative;
+}
+
+
+.environment:before {
+    content: "";
+    position: absolute;
+    border: 2px #666 solid;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    width: 6px;
+    height: 6px;
+    top: 20px;
+    right: 15px;
+}
+
+.environment:hover:before {
+    transform: rotate(135deg);
+    border-color: #fff;
+}
+
+
+
 
 aside {
     margin: 30rem 0;
@@ -383,7 +409,7 @@ aside a {
 
 aside li {
     background-color: #e4e4ec;
-    border: 1rem #cdcddd solid;
+    border: 0.5px #cdcddd solid;
     border-left: none;
     border-right: none;
 }
@@ -406,13 +432,18 @@ aside {
 }
 
 
-.environment >a:hover {
+.environment:hover > a {
     color: #fff;
     background-color: #fd8300;
 }
 
- .sub-environment a:hover {
+.sub-environment a:hover {
     background-color: #cecedd;
+    color: #666;
+}
+
+.sub-environment a {
+    padding: 17rem 30rem;
     color: #666;
 }
 
@@ -446,11 +477,16 @@ h2 {
 
 .projects img {
     width: 100%;
+    height: 150px;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .name {
     margin: 15rem 0;
 }
+
+
 
 .name a {
     font-size: 14rem;
@@ -460,14 +496,21 @@ h2 {
     text-decoration: none;
 }
 
-.name:hover {
-    text-decoration: underline;
-}
 
 .about {
     padding: 0 0 5rem 0;
 }
 
+/* figure a {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+} */
+
+.projects figure:hover .name a {
+    text-decoration: underline;
+}
 
 
 
@@ -527,7 +570,16 @@ footer ul {
     .flex {
         justify-content: space-between;
     }
+
+    .mail p {
+        text-align: left;
+    }
+
+    .button a {
+        width: 209px;
+    }
 }
+
 
 @media screen and (min-width: 768px) {
     .header-menu  {
@@ -571,6 +623,7 @@ footer ul {
     }
 }
 
+
 @media screen and (min-width: 1440px) {
     .flex, 
     .position,
@@ -580,11 +633,12 @@ footer ul {
     }
 
     article {
-        width: 60%;
+        width: 95%;
     }
 
     aside {
         min-width: 220rem;
+        margin-left: 25rem;
     }
 
     .projects {

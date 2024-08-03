@@ -136,48 +136,45 @@ nav {
     color: #fd8300;
 }
 
+.hidden {
+    display: none;
+}
+
 .social {
     display: flex;
     justify-content: center;
+    column-gap: 30px;
+    height: 25px;
 }
 
-
-.social a {
-    display: inline-block;
-    background: url(../img/sprite-social-hata.png) no-repeat;
+.fb {
+    width: 23px;
 }
 
-a.fb {
-    background-position: 0 0;
-    width: 10rem;
-    height: 19rem;
+.tw {
+    width: 17px;
 }
 
-.fb:hover {
-    background-position: 0 -22rem;
-} 
-
-a.tw {
-    background-position: -36rem -2rem;
-    width: 20rem;
-    height: 15rem;
+.inst {
+    width: 17px;
 }
 
-.tw:hover {
-    background-position: -36rem -24rem;
+.fb,
+.tw,
+.inst {
+    fill: #fff;
 }
 
-a.inst {
-    background-position: -82rem 0;
-    width: 19rem;
-    height: 20rem;
-}
-
+.fb:hover,
+.tw:hover,
 .inst:hover {
-    background-position: -82rem -22rem;
+    fill: #fd8300;
 }
 
-
+.header-info {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
 
 .flex {
     display: flex;
@@ -185,6 +182,13 @@ a.inst {
     flex-wrap: wrap;
     padding: 30rem 0;
     gap: 30rem;
+}
+
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .phone p:first-child,
@@ -200,8 +204,7 @@ a.inst {
 }
 
 .flex p {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 
@@ -245,6 +248,7 @@ a.inst {
 }
 
 .mail .mail-hata::before {
+    top: 4px;
     width: 18rem;
     height: 13rem;
     background: url(../img/mail.png) no-repeat;
@@ -255,7 +259,7 @@ a.inst {
 }
 
 .skype::before {
-    top: 0;
+    top: -1px;
     width: 19rem;
     height: 19rem;
     background: url(../img/skype.png) no-repeat;
@@ -274,7 +278,7 @@ a.inst {
     text-decoration: none;
 }
 
-.button:hover {
+.button a:hover {
     background-color: #fd8300;
     border-radius: 25rem;
 }
@@ -361,9 +365,9 @@ iframe {
     width: 100%;
 }
 
-.forms {
+/* .forms {
     display: flex;
-}
+} */
 
 .form h2 {
     margin: 5rem;
@@ -396,17 +400,21 @@ input[type="submit"] {
 
 .send {
     margin-left: 5rem;
-    margin-top: 10rem;
 }
+
 
 .send-agree {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 10px;
 }
 
-.agree {
+.agree label {
     display: flex;
-    margin: 25rem;
+    column-gap: 10px;
 }
 
 .agree label {
@@ -463,6 +471,7 @@ footer ul {
     text-align: center;
     padding: 15rem;
     font-size: 13rem;
+    font-family: "Arial";
 }
 
 @media screen and (min-width: 600px) {
@@ -472,6 +481,21 @@ footer ul {
  
     .flex {
         justify-content: space-between;
+    }
+
+    .mail p {
+        text-align: left;
+    }
+
+    .button a {
+        width: 209px;
+    }
+
+    .send-agree {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
     }
 }
  
